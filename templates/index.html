@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SPA Center - Beauty & Spa HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="/" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-primary"><span class="text-dark">Health</span> Center</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/form" class="nav-item nav-link">Form</a>
+                    <a href="/show_data" class="nav-item nav-link">Show Data</a>
+                </div>
+                <a href="/form" class="btn btn-primary d-none d-lg-block">Data</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="min-height: 100vh;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/image1.png' %}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Health & Care Center</h6>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Food Acidity</h3><h4>Calculations</h4>
+                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="form/">Enter Data</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="carousel-item position-relative" style="min-height: 100vh;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/image-2.png' %}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Food Acidity</h3>
+                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="form/">Enter Data</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="min-height: 100vh;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/image-4.png' %}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+                            <h3 class="display-3 text-capitalize text-white mb-3">Cellulite Treatment</h3>
+                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- form  -->
+    {% block form-content %}
+    {% endblock form-content %}
+
+    {% block main-content %}
+    {% endblock main-content %}
+    <!-- form end -->
+
+    <!-- About Start -->
+    {% block table-content %}
+    <div class="table-responsive">
+        <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="th-sm">Acidity-1 (ph)</th>
+              <th class="th-sm">Quantity-1 (grams)</th>
+              <th class="th-sm">Acidity-2 (ph)</th>
+              <th class="th-sm">Quantity-2 (grams)</th>
+              <th class="th-sm">Acidity-3 (ph)</th>
+              <th class="th-sm">Quantity-4 (grams)</th>
+              <th class="th-sm">Total grams</th>
+              <th class="th-sm">Results</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for data in mydata %}
+            <tr>
+              <td>{{data.acidity1}}</td>
+              <td>{{data.quantity1}}</td>
+              <td>{{data.acidity2}}</td>
+              <td>{{data.quantity2}}</td>
+              <td>{{data.acidity3}}</td>
+              <td>{{data.quantity3}}</td>
+              <td>{{data.total}}</td>
+              <td>{{data.result}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+              <th>Total grams</th>
+              <th class="th-sm">Results</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    {% endblock table-content %}
+    <!-- About End -->
+    <!-- Footer Start -->
+<footer class="bg-light text-center mt-5 text-lg-start fixed-bottom">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">Company.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>   
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
